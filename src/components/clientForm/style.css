@@ -1,0 +1,78 @@
+.clientregdata {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  width: 320px;
+  border: 1px solid #2b4170;
+  border-radius: 5px;
+}
+.datacontainer {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px 0px 10px;
+}
+.email {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12px;
+}
+h3 {
+  padding-bottom: 0;
+  margin-bottom: 0.2em;
+}
+.phone {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 10px 10px;
+}
+.imgcontainer {
+  display: flex;
+  flex-direction: row;
+}
+.clientimg {
+  margin: 8px;
+  filter: drop-shadow(0px 3px 3px gray);
+  width: 100px;
+  height: 100px;
+  border: 1px solid #2b4170;
+  -moz-box-shadow: 5x 5x 5px #ccc;
+  -webkit-box-shadow: 5x 5x 5px #ccc;
+  box-shadow: 5x 5x 5px #ccc;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2b4170;
+  border-radius: 3px;
+}
+input {
+  text-align: center;
+  margin: 5px;
+  min-width: 200px;
+  width: 50%;
+  max-width: 400px;
+  border-radius: 3px;
+  border: 1px solid #2b4170;
+}
+label {
+  visibility: hidden;
+  display: none;
+}

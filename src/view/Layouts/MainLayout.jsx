@@ -12,6 +12,7 @@ import {
   InstagramOutlined,
   YoutubeOutlined,
 } from "@ant-design/icons";
+import ClientFormRegister from "../../components/clientForm/ClientFormRegister";
 import "./style.css";
 /* import MultiPlayer from "../../components/audioPlayer/MultiPlayer"; */
 
@@ -34,16 +35,16 @@ const MainLayout = () => {
             Menu Item 1
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
-            Menu Item 2
+            New Client
           </Menu.Item>
-          <SubMenu key="sub1" icon={<UserOutlined />} title="User">
+          <SubMenu key="sub1" icon={<UserOutlined />} title="Clients">
             <Menu.Item key="3">Tom</Menu.Item>
             <Menu.Item key="4">Bill</Menu.Item>
             <Menu.Item key="5">Alex</Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-            <Menu.Item key="6">Team 1</Menu.Item>
-            <Menu.Item key="8">Team 2</Menu.Item>
+            <Menu.Item key="6">Személyi Edzés</Menu.Item>
+            <Menu.Item key="8">Étrend</Menu.Item>
           </SubMenu>
           <Menu.Item key="9" icon={<FileOutlined />}>
             Files
@@ -92,10 +93,7 @@ const MainLayout = () => {
         </div>
       </Sider>
       <Layout className="site-layout">
-        <Header
-          className="site-layout-background"
-          style={{ padding: 0, color: "red" }}
-        />
+        <Header className="site-layout-background" />
         <Content style={{ margin: "0 16px" }}>
           <Breadcrumb style={{ margin: "16px 0" }}>
             <Breadcrumb.Item>User</Breadcrumb.Item>
@@ -105,7 +103,7 @@ const MainLayout = () => {
             className="site-layout-background"
             style={{ padding: 24, minHeight: 360 }}
           >
-            Bill is a cat.
+            <ClientFormRegister />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
