@@ -36,7 +36,7 @@ export default function ClientFormRegister() {
       <input
         type="text"
         placeholder="Email"
-        {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+        {...register("Email", { required: false, pattern: /^\S+@\S+$/i })}
       />
       <label>Mobile number: </label>
 
@@ -51,7 +51,7 @@ export default function ClientFormRegister() {
       />
       <label>Szolgáltatás: </label>
 
-      <select {...register("Szolgáltatás", { required: true })}>
+      <select {...register("Services", { required: true })}>
         <option value="Edzés">Edzés</option>
         <option value="Étrend">Étrend</option>
         <option value="Masszázs">Masszázs</option>
@@ -61,11 +61,9 @@ export default function ClientFormRegister() {
           Masszázs + Edzés + Étrend
         </option>
       </select>
-      <label>First name: </label>
-
       <input type="url" placeholder="Image" {...register("Image", {})} />
 
-      <input type="submit" />
+      <input id="submitbtn" type="submit" />
 
       {regData.Firstname !== undefined && (
         <div className="clientregdata">
@@ -91,19 +89,19 @@ export default function ClientFormRegister() {
             <div className="phone">
               <h5>{`${regData.Mobilenumber} `}</h5>
             </div>
-            {regData.Szolgáltatás && (
+            {regData.Services && (
               <div className="services">
-                {regData.Szolgáltatás.includes("Edzés") && (
+                {regData.Services.includes("Edzés") && (
                   <Tag onClick={() => console.log("Edzés")} color="magenta">
                     Edzés
                   </Tag>
                 )}
-                {regData.Szolgáltatás.includes("Étrend") && (
+                {regData.Services.includes("Étrend") && (
                   <Tag onClick={() => console.log("Étrend")} color="green">
                     Étrend
                   </Tag>
                 )}
-                {regData.Szolgáltatás.includes("Masszázs") && (
+                {regData.Services.includes("Masszázs") && (
                   <Tag onClick={(a) => console.log("Masszázs")} color="blue">
                     Masszázs
                   </Tag>

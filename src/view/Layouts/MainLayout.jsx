@@ -13,6 +13,8 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 import ClientFormRegister from "../../components/clientForm/ClientFormRegister";
+/* import ClientsList from "../../components/clients/ClientsList"; */
+import Clients from "../../components/clients/Clients";
 import "./style.css";
 /* import MultiPlayer from "../../components/audioPlayer/MultiPlayer"; */
 
@@ -32,15 +34,13 @@ const MainLayout = () => {
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           <Menu.Item key="1" icon={<PieChartOutlined />}>
-            Menu Item 1
+            Dashboard
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
             New Client
           </Menu.Item>
           <SubMenu key="sub1" icon={<UserOutlined />} title="Clients">
-            <Menu.Item key="3">Tom</Menu.Item>
-            <Menu.Item key="4">Bill</Menu.Item>
-            <Menu.Item key="5">Alex</Menu.Item>
+              <Clients version={"menu"}/>
           </SubMenu>
           <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
             <Menu.Item key="6">Személyi Edzés</Menu.Item>
@@ -96,18 +96,23 @@ const MainLayout = () => {
         <Header className="site-layout-background" />
         <Content style={{ margin: "0 16px" }}>
           <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            <Breadcrumb.Item>1</Breadcrumb.Item>
+            <Breadcrumb.Item>2</Breadcrumb.Item>
+            <Breadcrumb.Item>3</Breadcrumb.Item>
+            <Breadcrumb.Item>4</Breadcrumb.Item>
+            <Breadcrumb.Item>...</Breadcrumb.Item>
           </Breadcrumb>
           <div
             className="site-layout-background"
-            style={{ padding: 24, minHeight: 360 }}
+            style={{ padding: 24, minHeight: "80vh" }}
           >
-            <ClientFormRegister />
+            <h1>Content</h1>
+            {/* <ClientFormRegister /> */}
+          {/*   <Clients /> */}
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2021 Created by David Balogh
+          ©2021 Created by Dávid Balogh
         </Footer>
       </Layout>
     </Layout>

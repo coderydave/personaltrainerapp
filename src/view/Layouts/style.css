@@ -116,3 +116,6 @@
 .ant-menu-item-active svg {
   font-size: 20px;
 }
+.ant-menu-item {
+  padding-left: 24px !important;
+}

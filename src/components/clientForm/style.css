@@ -66,11 +66,16 @@ form {
 input {
   text-align: center;
   margin: 5px;
-  min-width: 200px;
+  min-width: 150px;
   width: 50%;
-  max-width: 400px;
+  max-width: 300px;
   border-radius: 3px;
   border: 1px solid #2b4170;
+}
+
+#submitbtn {
+  margin: 20px;
+  width: 20%;
 }
 label {
   visibility: hidden;

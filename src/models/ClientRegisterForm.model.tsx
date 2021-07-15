@@ -1,11 +1,8 @@
-export default interface ClientRegisterForm {
-  services: String[];
-  forname: String;
-  lastname: String;
-  phone: Number;
-  email?: String;
-  birthdate?: Date;
-  descriptions?: String;
-  weight: Number;
-  height: Number;
+export interface ClientRegisterForm {
+  Firstname: String;
+  Lastname: String;
+  Email?: String;
+  Mobilenumber: Number;
+  Services: String[];
+  Image: String;
 }
