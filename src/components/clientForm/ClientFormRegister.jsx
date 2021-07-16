@@ -16,55 +16,57 @@ export default function ClientFormRegister() {
   };
   console.log(errors);
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>First name: </label>
-      <h1>New Client Registrating</h1>
-      <input
-        type="text"
-        placeholder="First name"
-        {...register("Firstname", { required: true, maxLength: 20 })}
-      />
-      <label>Last name: </label>
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label>First name: </label>
+        <h1>New Client Registrating</h1>
+        <input
+          type="text"
+          placeholder="First name"
+          {...register("Firstname", { required: true, maxLength: 20 })}
+        />
+        <label>Last name: </label>
 
-      <input
-        type="text"
-        placeholder="Last name"
-        {...register("Lastname", { required: true, maxLength: 20 })}
-      />
-      <label>Email: </label>
+        <input
+          type="text"
+          placeholder="Last name"
+          {...register("Lastname", { required: true, maxLength: 20 })}
+        />
+        <label>Email: </label>
 
-      <input
-        type="text"
-        placeholder="Email"
-        {...register("Email", { required: false, pattern: /^\S+@\S+$/i })}
-      />
-      <label>Mobile number: </label>
+        <input
+          type="text"
+          placeholder="Email"
+          {...register("Email", { required: false, pattern: /^\S+@\S+$/i })}
+        />
+        <label>Mobile number: </label>
 
-      <input
-        type="tel"
-        placeholder="Mobile number"
-        {...register("Mobilenumber", {
-          required: true,
-          minLength: 6,
-          maxLength: 12,
-        })}
-      />
-      <label>Szolgáltatás: </label>
+        <input
+          type="tel"
+          placeholder="Mobile number"
+          {...register("Mobilenumber", {
+            required: true,
+            minLength: 6,
+            maxLength: 12,
+          })}
+        />
+        <label>Szolgáltatás: </label>
 
-      <select {...register("Services", { required: true })}>
-        <option value="Edzés">Edzés</option>
-        <option value="Étrend">Étrend</option>
-        <option value="Masszázs">Masszázs</option>
-        <option value="Edzés, Étrend">Edzés + Étrend</option>
-        <option value="Masszázs, Edzés">Edzés + Masszázs</option>
-        <option value="Masszázs,Edzés, Étrend">
-          Masszázs + Edzés + Étrend
-        </option>
-      </select>
-      <input type="url" placeholder="Image" {...register("Image", {})} />
+        <select {...register("Services", { required: true })}>
+          <option value="Edzés">Edzés</option>
+          <option value="Étrend">Étrend</option>
+          <option value="Masszázs">Masszázs</option>
+          <option value="Edzés, Étrend">Edzés + Étrend</option>
+          <option value="Masszázs, Edzés">Edzés + Masszázs</option>
+          <option value="Masszázs,Edzés, Étrend">
+            Masszázs + Edzés + Étrend
+          </option>
+        </select>
+        <input type="url" placeholder="Image" {...register("Image", {})} />
 
-      <input id="submitbtn" type="submit" />
-
+        <input id="submitbtn" type="submit" />
+      </form>
+      {/* Ez Toast message-ban érkezik hogy elkészült */}
       {regData.Firstname !== undefined && (
         <div className="clientregdata">
           <div className="imgcontainer">
@@ -111,6 +113,6 @@ export default function ClientFormRegister() {
           </div>
         </div>
       )}
-    </form>
+    </>
   );
 }
